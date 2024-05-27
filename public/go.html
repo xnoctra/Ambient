@@ -357,7 +357,7 @@ iframe {
     </div>
         
 <div style="display:none;" id="myDiv">
-    <div class="header">
+    <div class="header" style="z-index: 1">
         <div class="parent">
             <span class="material-symbols-outlined">logout</span>
             <span class="material-symbols-outlined">keyboard_backspace</span>
@@ -368,9 +368,9 @@ iframe {
             <span class="material-symbols-outlined">open_in_new</span>
             <span class="material-symbols-outlined">fullscreen</span>
         </div>
-    </div>
+    </div>	
+    <iframe src="" id="iframeId" style="bottom: 0; z-index: 0" style="border: 0px none;" name="Iframe" scrolling="yes" frameborder="0" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
 </div>
-<iframe src="" id="iframeId" style="bottom: 0;" style="border: 0px none;" name="Iframe" scrolling="yes" frameborder="0" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
 <script>
     window.addEventListener('load', function () {
     showPage();
