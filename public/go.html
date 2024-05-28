@@ -34,7 +34,7 @@
 .header {
   position: fixed;
   left: 50%;
-  top: -7%; /* Start hidden off-screen */
+  top: -5.5%; /* Start hidden off-screen */
   transform: translate(-50%);
   margin: 0;
   width: 100vw;
@@ -359,8 +359,7 @@ iframe {
 <div style="display:none;" id="myDiv">
     <div class="header" style="z-index: 1">
         <div class="parent">
-            <span class="material-symbols-outlined">logout</span>
-            <span class="material-symbols-outlined">keyboard_backspace</span>
+            <span id="homebutton" class="material-symbols-outlined">logout</span></a><span class="material-symbols-outlined">keyboard_backspace</span>
             <span class="material-symbols-outlined">refresh</span>
             <span class="material-symbols-outlined">arrow_right_alt</span>
             <input type="text" placeholder="Search or type a URL" id="searchbar" required="false" title=""/>
@@ -430,8 +429,16 @@ navbar.addEventListener('mouseleave', function() {
 });
 
 
+  // Select the icons
+  var home = document.getElementById('homebutton');
 
+// Function to navigate to the home page
+function goToHomePage() {
+window.location.href = '/'; // Replace '/' with the path to your home page if necessary
+}
 
+// Add click event listeners to the icons
+home.addEventListener('click', goToHomePage);
 
 </script>
 <script>

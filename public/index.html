@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="title" content="Smartify" />
+<meta name="description" content="A fast way to unblock websites." />
+<meta name="google-adsense-account" content="ca-pub-2804638430420139">
 <link rel="icon" type="image/x-icon" href="smartify.ico">
 <title>Smartify</title>
 <style>
@@ -15,6 +19,31 @@
     color: #303030;
   }
 
+  .footer a {
+    text-decoration: none;
+    color: #303030;
+    transition: 0.3s;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .footer a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: #00FF7B;
+    filter: drop-shadow(0 0 5px #00FF7B) drop-shadow( 0 0 25px #00FF7B);
+    transition: 0.3s;
+  }
+
+.footer {
+  position: fixed;
+  display: inline-flex;
+  z-index: 2;
+  left: 50%;
+  top: 98%;
+  transform: translate(-50%, -50%);
+}
+
   .full-screen-container {
   display: flex; 
   flex-direction: column;
@@ -23,6 +52,8 @@
   height: 100vh; 
   width: 100vw;
   margin: 0;
+  z-index: 1;
+  position: fixed;
 }
 
   #usernameField {
@@ -188,6 +219,7 @@
   transform-origin: 50% 48%;
   border-radius: 43%;
   animation: drift 7000ms infinite linear;
+  z-index: 0;
 }
 
 .wave.-three {
@@ -329,6 +361,10 @@
     <form id="uv-form">
     <input type="text" placeholder="Search or type a URL" id="usernameField" required/>
     </form>
+    </div>
+    <div class="footer">
+      <a href="https://github.com/nightproxy/smartify"><p>GitHub</p></a>
+      <a href="https://discord.lightgo.app"><p>Discord</p></a>
     </div>
 </div>
 <script src="/@/bundle.js"></script>
