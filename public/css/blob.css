@@ -1,0 +1,50 @@
+.blobs {
+    position: absolute;
+    top: -35%;
+    right: 0;
+    left: 0;
+}
+
+.blobCenter::before {
+    content: '';
+    background: #ff00bf;
+    filter: blur(230px);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 999;
+    top: -380px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 700px;
+    width: 500px;
+    z-index: -1;
+}
+
+.blobLeft::before {
+    content: '';
+    background: #bd24da;
+    filter: blur(200px);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 999;
+    top: -70px;
+    left: -300px;
+    height: 600px;
+    width: 700px;
+    z-index: -1;
+}
+
+.blobRight::before {
+    content: '';
+    background: #00e5ff;
+    filter: blur(200px);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 999;
+    top: -70px;
+    right: -300px;
+    height: 600px;
+    width: 700px;
+    z-index: -1;
+}
