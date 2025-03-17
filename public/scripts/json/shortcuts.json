@@ -1,0 +1,17 @@
+[
+    {
+      "name": "YouTube",
+      "img": "https://cdn.mos.cms.futurecdn.net/jU32sQZkPe594ExQNiGyrS-840-80.jpg",
+      "link": "https://youtube.com"
+    },
+    {
+      "name": "Discord",
+      "img": "https://cdn.prod.website-files.com/59e16042ec229e00016d3a66/64389538b041074b3c276b6a_Slide%2015%20(2).webp", 
+      "link": "https://discord.com"
+    },
+    {
+      "name": "Twitch",
+      "img": "https://golightstream.com/wp-content/uploads/2022/02/Twitch-Banner-Size-1.jpg",
+      "link": "https://reddit.com"
+    }
+  ]

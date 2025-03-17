@@ -1,0 +1,29 @@
+.shortcutsContain {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  margin: 10px 0 -40px 0;
+  gap: 7px;
+}
+
+.shortcut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.shortcut img {
+  height: 80px;
+  width: auto;
+  transform: scale(1.7);
+  transition: 0.2s ease;
+}
+
+.shortcut:hover img {
+  transform: scale(1.9);
+}
