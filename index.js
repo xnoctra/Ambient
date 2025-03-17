@@ -47,9 +47,9 @@ server.on("upgrade", (req, socket, head) => {
 
 server.on("listening", () => {
   const address = server.address();
-  var theme = chalk.hex("#00FF7F");
-  var host = chalk.hex("0d52bd");
-  console.log(`Listening to ${chalk.bold(theme("Smartify"))} on:`);
+  var theme = chalk.hex("#b578ff");
+  var host = chalk.hex("b578ff");
+  console.log(`Listening to ${chalk.bold(theme("Ambient"))} on:`);
 
   console.log(`  ${chalk.bold(host("Local System:"))}            http://${address.family === "IPv6" ? `[${address.address}]` : addr.address}${address.port === 80 ? "" : ":" + chalk.bold(address.port)}`);
 
