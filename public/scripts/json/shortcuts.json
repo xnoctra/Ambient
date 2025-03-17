@@ -1,17 +1,42 @@
 [
     {
+      "name": "Google",
+      "img": "https://storage.googleapis.com/gd-prod/images/a910d418-7123-4bc4-aa3b-ef7e25e74ae6.799a99c1196c2fd4.webp",
+      "link": "https://google.com"
+    },
+    {
+      "name": "Pinterest",
+      "img": "https://fiu-original.b-cdn.net/fontsinuse.com/use-images/82/82314/82314.png?filename=Pinterest-badge-wordmark.png",
+      "link": "https://pinterest.com/login"
+    },
+    {
+      "name": "Amazon",
+      "img": "https://fabrikbrands.com/wp-content/uploads/Amazon-Logo-1.png",
+      "link": "https://amazon.com"
+    },
+    {
+      "name": "ChatGPT",
+      "img": "https://www.hatchwise.com/wp-content/uploads/2024/05/image-27-1024x569.png",
+      "link": "https://chatgpt.com"
+    },
+    {
       "name": "YouTube",
-      "img": "https://cdn.mos.cms.futurecdn.net/jU32sQZkPe594ExQNiGyrS-840-80.jpg",
+      "img": "https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/05/youtube-logo.png?auto=format&q=60&fit=max&w=930",
       "link": "https://youtube.com"
     },
     {
       "name": "Discord",
-      "img": "https://cdn.prod.website-files.com/59e16042ec229e00016d3a66/64389538b041074b3c276b6a_Slide%2015%20(2).webp", 
-      "link": "https://discord.com"
+      "img": "https://support.discord.com/hc/user_images/fBEuvpvxwAX3_rh2KTUj1Q.png", 
+      "link": "https://discord.com/login"
     },
     {
       "name": "Twitch",
-      "img": "https://golightstream.com/wp-content/uploads/2022/02/Twitch-Banner-Size-1.jpg",
+      "img": "https://fotografias.larazon.es/clipping/cmsimages02/2021/01/19/3C9DDD57-FFBF-4B19-8FC9-E003F1C0B470/98.jpg?crop=800,450,x0,y15&width=1900&height=1069&optimize=low&format=webply",
       "link": "https://reddit.com"
+    },
+    {
+      "name": "GitHub",
+      "img": "https://i.pinimg.com/474x/6e/39/83/6e3983ef421a6536731ab1123d847d60.jpg",
+      "link": "https://github.com"
     }
   ]

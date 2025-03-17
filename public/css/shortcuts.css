@@ -1,10 +1,11 @@
 .shortcutsContain {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 600px;
-  margin: 10px 0 -40px 0;
+  width: 800px;
+  margin: 10px 0 -100px 0;
   gap: 7px;
 }
 
@@ -18,12 +19,12 @@
 }
 
 .shortcut img {
-  height: 80px;
-  width: auto;
-  transform: scale(1.7);
+  height: 100px;
+  width: 180px;
+  object-fit: cover;
   transition: 0.2s ease;
 }
 
 .shortcut:hover img {
-  transform: scale(1.9);
+  transform: scale(1.1);
 }
