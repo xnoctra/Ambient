@@ -1,0 +1,48 @@
+.changelogContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 90vw;
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 50px 50px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+label {
+    font-size: 13px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 5px 0;
+}
+
+li.add::before {
+    content: '+';
+    position: absolute;
+    transform: translate(-20px, -4px);
+    font-size: 20px;
+}
+
+li.add {
+    color: rgb(94, 209, 94);
+}
+
+li.remove::before {
+    content: '-';
+    position: absolute;
+    transform: translate(-20px, -5px);
+    font-size: 25px;
+}
+
+li.remove {
+    color: rgb(209, 94, 94);
+}
