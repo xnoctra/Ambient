@@ -17,6 +17,32 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
 app.use(cors());
 
+const rateLimit = (limit, timeFrame) => {
+  let requests = 0;
+  const resetTime = setInterval(() => {
+      requests = 0;
+  }, timeFrame);
+
+  return (req, res, next) => {
+      requests++;
+      if (requests > limit) {
+          clearInterval(resetTime);
+          return res.redirect('/rlexeeded'); // Redirect when rate limit is exceeded
+      }
+      next();
+  };
+};
+
+app.use(rateLimit(5, 10000)); // RL: 5 requests per 10 seconds
+
+app.get('/', (req, res) => {
+  res.send('Welcome to the API!');
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+
 app.get("/", (req, res) => {
   res.sendFile(path.join(process.cwd(), "/public/index.html"));
 });
