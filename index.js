@@ -19,24 +19,17 @@ app.use(cors());
 
 const rateLimit = (limit, timeFrame) => {
   let requests = 0;
-  let isRateLimited = false;
-
   const resetTime = setInterval(() => {
-    requests = 0;
-    isRateLimited = false;
+      requests = 0;
   }, timeFrame);
 
   return (req, res, next) => {
-    if (isRateLimited) {
-      return res.status(429).send("Too many requests, please try again later.");
-    }
-
-    requests++;
-    if (requests > limit) {
-      isRateLimited = true;
-      return res.status(429).send("Rate limit exceeded. Try again in a minute.");
-    }
-    next();
+      requests++;
+      if (requests > limit) {
+          clearInterval(resetTime);
+          return res.status(429).send({ message: "You are being rate limited. Please try again later." });
+      }
+      next();
   };
 };
 
