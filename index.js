@@ -27,21 +27,13 @@ const rateLimit = (limit, timeFrame) => {
       requests++;
       if (requests > limit) {
           clearInterval(resetTime);
-          return res.redirect('/rlexeeded'); // Redirect when rate limit is exceeded
+          return res.redirect('/rlexeeded'); 
       }
       next();
   };
 };
 
-app.use(rateLimit(5, 10000)); // RL: 5 requests per 10 seconds
-
-app.get('/', (req, res) => {
-  res.send('Welcome to the API!');
-});
-
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});
+app.use(rateLimit(5, 10000)); // RL: 5rp10s
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(process.cwd(), "/public/index.html"));
