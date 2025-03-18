@@ -1,0 +1,8 @@
+.changelogContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    width: 800px;
+    background: var(--element-bg);
+}

@@ -16,7 +16,7 @@
     },
     {
         "name": "ChatGPT",
-        "img": "https://www.hatchwise.com/wp-content/uploads/2024/05/image-27-1024x569.png",
+        "img": "https://no.uglisounds.se/assets/imgs/sb/ChatGPT.webp",
         "link": "https://chatgpt.com"
     },
     {
@@ -26,17 +26,17 @@
     },
     {
         "name": "Discord",
-        "img": "https://support.discord.com/hc/user_images/fBEuvpvxwAX3_rh2KTUj1Q.png", 
+        "img": "https://no.uglisounds.se/assets/imgs/sb/Discord.webp", 
         "link": "https://discord.com/login"
     },
     {
         "name": "Twitch",
-        "img": "https://fotografias.larazon.es/clipping/cmsimages02/2021/01/19/3C9DDD57-FFBF-4B19-8FC9-E003F1C0B470/98.jpg?crop=800,450,x0,y15&width=1900&height=1069&optimize=low&format=webply",
+        "img": "https://no.uglisounds.se/assets/imgs/sb/Twitch.webp",
         "link": "https://reddit.com"
     },
     {
         "name": "GitHub",
-        "img": "https://i.pinimg.com/474x/6e/39/83/6e3983ef421a6536731ab1123d847d60.jpg",
+        "img": "https://no.uglisounds.se/assets/imgs/sb/GitHub.webp",
         "link": "https://github.com"
     }
 ]
