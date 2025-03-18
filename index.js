@@ -19,21 +19,28 @@ app.use(cors());
 
 const rateLimit = (limit, timeFrame) => {
   let requests = 0;
+  let isRateLimited = false;
+
   const resetTime = setInterval(() => {
-      requests = 0;
+    requests = 0;
+    isRateLimited = false;
   }, timeFrame);
 
   return (req, res, next) => {
-      requests++;
-      if (requests > limit) {
-          clearInterval(resetTime);
-          return res.redirect('/rlexeeded'); 
-      }
-      next();
+    if (isRateLimited) {
+      return res.status(429).send("Too many requests, please try again later.");
+    }
+
+    requests++;
+    if (requests > limit) {
+      isRateLimited = true;
+      return res.status(429).send("Rate limit exceeded. Try again in a minute.");
+    }
+    next();
   };
 };
 
-app.use(rateLimit(5, 10000)); // RL: 5rp10s
+app.use(rateLimit(10, 60000)); // RL: 10 requests per minute
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(process.cwd(), "/public/index.html"));
@@ -77,7 +84,7 @@ server.on("listening", () => {
   var host = chalk.hex("b578ff");
   console.log(`Listening to ${chalk.bold(theme("Ambient"))} on:`);
 
-  console.log(`  ${chalk.bold(host("Local System:"))}            http://${address.family === "IPv6" ? `[${address.address}]` : addr.address}${address.port === 80 ? "" : ":" + chalk.bold(address.port)}`);
+  console.log(`  ${chalk.bold(host("Local System:"))}            http://${address.family === "IPv6" ? `[${address.address}]` : address.address}${address.port === 80 ? "" : ":" + chalk.bold(address.port)}`);
 
   console.log(`  ${chalk.bold(host("Local System:"))}            http://localhost${address.port === 8080 ? "" : ":" + chalk.bold(address.port)}`);
 
