@@ -29,6 +29,14 @@ app.get("/changelog", (req, res) => {
   res.sendFile(path.join(process.cwd(), "/public/changelog.html"));
 });
 
+app.get("/404", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "/public/err/404.html"));
+});
+
+app.use((req, res, next) => {
+  res.status(404).redirect('/404');
+});
+
 server.on("request", (req, res) => {
   if (bareServer.shouldRoute(req)) {
     bareServer.routeRequest(req, res);
@@ -58,7 +66,6 @@ server.on("listening", () => {
   try {
     console.log(`  ${chalk.bold(host("On Your Network:"))}  http://${address.ip()}${address.port === 8080 ? "" : ":" + chalk.bold(address.port)}`);
   } catch (err) {
-    // can't find LAN interface
   }
 
   if (process.env.REPL_SLUG && process.env.REPL_OWNER) {
