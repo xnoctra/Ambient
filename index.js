@@ -17,24 +17,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
 app.use(cors());
 
-const rateLimit = (limit, timeFrame) => {
-  let requests = 0;
-  const resetTime = setInterval(() => {
-      requests = 0;
-  }, timeFrame);
-
-  return (req, res, next) => {
-      requests++;
-      if (requests > limit) {
-          clearInterval(resetTime);
-          return res.status(429).send({ message: "You are being rate limited. Please try again later." });
-      }
-      next();
-  };
-};
-
-app.use(rateLimit(10, 60000)); // RL: 10 requests per minute
-
 app.get("/", (req, res) => {
   res.sendFile(path.join(process.cwd(), "/public/index.html"));
 });
