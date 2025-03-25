@@ -1,18 +1,21 @@
 .blobs {
     position: absolute;
-    top: -35%;
+    top: -60%;
     right: 0;
     left: 0;
+    --left: #4f4f4f;
+    --center: #4f4f4f;
+    --right: #4f4f4f;
 }
 
 .blobCenter::before {
     content: '';
-    background: #ff00bf;
+    background: var(--center);
     filter: blur(230px);
     border-radius: 50%;
     position: absolute;
     z-index: 999;
-    top: -380px;
+    top: -300px;
     left: 0;
     right: 0;
     margin: auto;
@@ -23,12 +26,12 @@
 
 .blobLeft::before {
     content: '';
-    background: #bd24da;
+    background: var(--left);
     filter: blur(200px);
     border-radius: 50%;
     position: absolute;
     z-index: 999;
-    top: -70px;
+    top: -120px;
     left: -300px;
     height: 600px;
     width: 700px;
@@ -37,12 +40,12 @@
 
 .blobRight::before {
     content: '';
-    background: #00e5ff;
+    background: var(--right);
     filter: blur(200px);
     border-radius: 50%;
     position: absolute;
     z-index: 999;
-    top: -70px;
+    top: -120px;
     right: -300px;
     height: 600px;
     width: 700px;

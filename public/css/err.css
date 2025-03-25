@@ -8,6 +8,10 @@ p {
     margin-top: 0;
 }
 
+h1, p {
+    color: var(--text);
+}
+
 a {
     background: #fff;
     color: #000;
