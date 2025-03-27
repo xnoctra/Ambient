@@ -1,5 +1,5 @@
 *.md
-public/?/
+public/search/
 public/assets/css/.archived/
 package-lock.json
 node_modules/**

@@ -18,7 +18,7 @@ async function launch(val) {
     if ("serviceWorker" in navigator) {
       let proxySetting = localStorage.getItem("proxy") || "uv";
       let swConfig = {
-        uv: { file: "/?/sw.js", config: __uv$config }
+        uv: { file: "/search/sw.js", config: __uv$config }
       };
 
       // Use the selected proxy setting or default to 'uv'

@@ -1,149 +1,152 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="title" content="Ambient" />
-    <meta name="description" content="The better way to browse." />
-    <link rel="icon" type="image/x-icon" href="logo.png" />
-    <title>Ambient</title>
-    <!-- Critical CSS -->
-    <link rel="stylesheet" href="assets/css/global.css" />
-    <link rel="stylesheet" href="assets/css/theme/default.css" />
-    <!-- Non-critical CSS -->
-    <link rel="stylesheet" href="assets/css/rays.css" />
-    <link rel="stylesheet" href="assets/css/nav.css" />
-    <link rel="stylesheet" href="assets/css/elements/news.css" />
-    <link rel="stylesheet" href="assets/css/searchbar.css" />
-    <link rel="stylesheet" href="assets/css/shortcuts.css" />
-    <link rel="stylesheet" href="assets/css/elements/greeting.css" />
-    <link rel="stylesheet" href="assets/css/elements/ping.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="raysContain">
-        <div class="rays"></div>
-      </div>
-      <nav>
-        <img src="assets/imgs/logo.png" alt="logo" />
-        <div class="flex">
-          <a>Home</a>
-          <a>Games</a>
-          <a>Apps</a>
-          <a>AI</a>
-        </div>
-        <i data-lucide="settings"></i>
-      </nav>
-      <div class="news">
-        <i data-lucide="flame"></i>
-        <p></p>
-      </div>
-      <h1 class="title">Ambient</h1>
-      <div class="searchbarContainer">
-        <i data-lucide="search"></i>
-        <form id="uv-form">
-          <input class="searchbar" id="searchbar" type="text" required />
-        </form>
-      </div>
-      <div class="shortcutsContain" id="shortcutsContain"></div>
-      <div id="greeting"></div>
-      <div class="pingCounter">
-        <div id="pingDot" class="dot"></div>
-        <span id="pingValue"></span>
-      </div>
-      <footer>
-        <a href="https://github.com/xnoctra/Ambient" target="_blank">GitHub</a>
-        <span>\</span>
-        <a href="https://discord.gg/5hETqnGc3e">Discord</a>
-      </footer>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="title" content="Ambient" />
+  <meta name="description" content="The better way to browse." />
+  <link rel="icon" type="image/x-icon" href="logo.png" />
+  <title>Ambient</title>
+  <!-- Critical CSS -->
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/theme/default.css" />
+  <!-- Non-critical CSS -->
+  <link rel="stylesheet" href="assets/css/rays.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/elements/news.css" />
+  <link rel="stylesheet" href="assets/css/searchbar.css" />
+  <link rel="stylesheet" href="assets/css/shortcuts.css" />
+  <link rel="stylesheet" href="assets/css/elements/greeting.css" />
+  <link rel="stylesheet" href="assets/css/elements/ping.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="raysContain">
+      <div class="rays"></div>
     </div>
-    <script src="assets/js/index.js"></script>
-    <script src="assets/js/shortcuts.js"></script>
-    <script src="assets/js/greeting.js"></script>
-    <script src="assets/js/ping.js"></script>
-    <!-- UV Files -->
-    <script src="/?/bundle.js"></script>
-    <script src="/?/config.js"></script>
-    <!-- DO NOT REMOVE -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-      lucide.createIcons();
-    </script>
-    <!-- DO NOT REMOVE -->
-    <script>
-      const form = document.getElementById('uv-form');
-      const address = document.getElementById('searchbar');
-      const searchEngine = document.getElementById('uv-search-engine');
-      const error = document.getElementById('uv-error');
-      const errorCode = document.getElementById('uv-error-code');
-      const input = document.querySelector('input');
+    <nav>
+      <img src="assets/imgs/logo.png" alt="logo" />
+      <div class="flex">
+        <a>Home</a>
+        <a>Games</a>
+        <a>Apps</a>
+        <a>AI</a>
+      </div>
+      <i data-lucide="settings"></i>
+    </nav>
+    <div class="news">
+      <i data-lucide="flame"></i>
+      <p></p>
+    </div>
+    <h1 class="title">Ambient</h1>
+    <div class="searchbarContainer">
+      <i data-lucide="search"></i>
+      <form id="uv-form">
+        <input class="searchbar" id="searchbar" type="text" required />
+      </form>
+    </div>
+    <div class="shortcutsContain" id="shortcutsContain"></div>
+    <div id="greeting"></div>
+    <div class="pingCounter">
+      <div id="pingDot" class="dot"></div>
+      <span id="pingValue"></span>
+    </div>
+    <footer>
+      <a href="https://github.com/xnoctra/Ambient" target="_blank">GitHub</a>
+      <span>\</span>
+      <a href="https://discord.gg/5hETqnGc3e">Discord</a>
+    </footer>
+  </div>
+  <script src="assets/js/index.js"></script>
+  <script src="assets/js/shortcuts.js"></script>
+  <script src="assets/js/greeting.js"></script>
+  <script src="assets/js/ping.js"></script>
+  <!-- UV Files -->
+  <script src="/search/bundle.js"></script>
+  <script src="/search/config.js"></script>
+  <!-- DO NOT REMOVE -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <!-- DO NOT REMOVE -->
+  <script>
+    const form = document.getElementById('uv-form');
+    const address = document.getElementById('searchbar');
+    const searchEngine = document.getElementById('uv-search-engine');
+    const error = document.getElementById('uv-error');
+    const errorCode = document.getElementById('uv-error-code');
+    const input = document.querySelector('input');
 
-      // crypts class definition
-      class crypts {
-        static encode(str) {
-          return encodeURIComponent(
-            str
-              .toString()
-              .split('')
-              .map((char, ind) => (ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char))
-              .join('')
-          );
-        }
-
-        static decode(str) {
-          if (str.charAt(str.length - 1) === '/') {
-            str = str.slice(0, -1);
-          }
-          return decodeURIComponent(
-            str
-              .split('')
-              .map((char, ind) => (ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char))
-              .join('')
-          );
-        }
+    // crypts class definition
+    class crypts {
+      static encode(str) {
+        return encodeURIComponent(
+          str
+            .toString()
+            .split('')
+            .map((char, ind) => (ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char))
+            .join('')
+        );
       }
 
-      function search(input) {
-        input = input.trim();
-        const searchTemplate = localStorage.getItem('engine') || 'https://google.com/search?q=%s';
+      static decode(str) {
+        if (str.charAt(str.length - 1) === '/') {
+          str = str.slice(0, -1);
+        }
+        return decodeURIComponent(
+          str
+            .split('')
+            .map((char, ind) => (ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char))
+            .join('')
+        );
+      }
+    }
 
+    function search(input) {
+      input = input.trim();
+      const searchTemplate = localStorage.getItem('engine') || 'https://google.com/search?q=%s';
+
+      try {
+        return new URL(input).toString();
+      } catch (err) {
         try {
-          return new URL(input).toString();
-        } catch (err) {
-          try {
-            const url = new URL(`http://${input}`);
-            if (url.hostname.includes('.')) {
-              return url.toString();
-            }
-            throw new Error('Invalid hostname');
-          } catch (err) {
-            return searchTemplate.replace('%s', encodeURIComponent(input));
+          const url = new URL(`http://${input}`);
+          if (url.hostname.includes('.')) {
+            return url.toString();
           }
+          throw new Error('Invalid hostname');
+        } catch (err) {
+          return searchTemplate.replace('%s', encodeURIComponent(input));
         }
       }
-      if ('serviceWorker' in navigator) {
-        var proxySetting = 'uv';
-        let swConfig = {
-          uv: { file: '/?/sw.js', config: __uv$config },
-        };
+    }
+    if ('serviceWorker' in navigator) {
+      var proxySetting = 'uv';
+      let swConfig = {
+        uv: { file: '/search/sw.js', config: __uv$config },
+      };
 
-        let { file: swFile, config: swConfigSettings } = swConfig[proxySetting];
+      let { file: swFile, config: swConfigSettings } = swConfig[proxySetting];
 
-        navigator.serviceWorker
-          .register(swFile, { scope: swConfigSettings.prefix })
-          .then((registration) => {
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            form.addEventListener('submit', async (event) => {
-              event.preventDefault();
-              let encodedUrl = swConfigSettings.prefix + crypts.encode(search(address.value));
-              sessionStorage.setItem('encodedUrl', encodedUrl);
-              location.href = '/go';
-            });
-          })
-          .catch((error) => {
-            console.error('ServiceWorker registration failed:', error);
+      navigator.serviceWorker
+        .register(swFile, { scope: swConfigSettings.prefix })
+        .then((registration) => {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            let encodedUrl = swConfigSettings.prefix + crypts.encode(search(address.value));
+            sessionStorage.setItem('encodedUrl', encodedUrl);
+            location.href = '/go';
           });
-      }
-    </script>
-  </body>
+        })
+        .catch((error) => {
+          console.error('ServiceWorker registration failed:', error);
+        });
+    }
+  </script>
+</body>
+
 </html>

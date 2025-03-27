@@ -1,12 +1,12 @@
 /*global Ultraviolet*/
 self.__uv$config = {
-    prefix: '/?/windowsrc-amb/',
+    prefix: '/search/windowsrc-amb/',
     bare: '/bare/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
-    handler: '/?/handler.js',
-    client: '/?/client.js',
-    bundle: '/?/bundle.js',
-    config: '/?/config.js',
-    sw: '/?/sw-.js',
+    handler: '/search/handler.js',
+    client: '/search/client.js',
+    bundle: '/search/bundle.js',
+    config: '/search/config.js',
+    sw: '/search/sw-.js',
 };
