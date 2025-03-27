@@ -1,0 +1,28 @@
+.pingCounter {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.dot.good {
+  background-color: rgb(102, 231, 113);
+}
+
+.dot.medium {
+  background-color: rgb(231, 190, 102);
+}
+
+.dot.poor {
+  background-color: rgb(231, 102, 102);
+}
+
+#pingValue {
+  color: var(--text);
+}

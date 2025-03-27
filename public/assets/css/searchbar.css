@@ -5,7 +5,7 @@
   width: 480px;
   height: 20px;
   background-color: var(--bg);
-  border-radius: 30px;
+  border-radius: var(--border-radius);
   padding: 25px 15px;
   box-sizing: border-box;
   outline: none;
