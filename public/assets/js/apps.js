@@ -1,6 +1,6 @@
 (async () => {
     try {
-      let response = await fetch("json/apps.json");
+      let response = await fetch("assets/js/json/apps.json");
       let apps = await response.json();
       const appsContain = document.getElementById("appsContain");
   
