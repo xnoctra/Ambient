@@ -6,10 +6,10 @@ async function launch(val) {
 
       const browseSetting = localStorage.getItem("browse");
       const browseUrls = {
-        go: "/go",
+        go: "/search",
         norm: encodedUrl,
       };
-      const urlToNavigate = browseUrls[browseSetting] || "/go";
+      const urlToNavigate = browseUrls[browseSetting] || "/search";
       location.href = urlToNavigate;
     } catch (error) {
       location.href = "/error";
@@ -39,10 +39,10 @@ async function launch(val) {
             sessionStorage.setItem("encodedUrl", encodedUrl);
             const browseSetting = localStorage.getItem("browse");
             const browseUrls = {
-              go: "/go",
+              go: "/search",
               norm: encodedUrl,
             };
-            const urlToNavigate = browseUrls[browseSetting] || "/go";
+            const urlToNavigate = browseUrls[browseSetting] || "/search";
             location.href = urlToNavigate;
           } catch (error) {
             location.href = "/error";

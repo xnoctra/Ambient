@@ -35,6 +35,8 @@ nav a {
   cursor: pointer;
   user-select: none;
   font-weight: 100;
+  color: var(--text);
+  text-decoration: none;
 }
 
 nav a::after {

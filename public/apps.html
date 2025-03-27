@@ -14,11 +14,7 @@
   <!-- Non-critical CSS -->
   <link rel="stylesheet" href="assets/css/rays.css" />
   <link rel="stylesheet" href="assets/css/nav.css" />
-  <link rel="stylesheet" href="assets/css/elements/news.css" />
-  <link rel="stylesheet" href="assets/css/searchbar.css" />
-  <link rel="stylesheet" href="assets/css/shortcuts.css" />
-  <link rel="stylesheet" href="assets/css/elements/greeting.css" />
-  <link rel="stylesheet" href="assets/css/elements/ping.css" />
+  <link rel="stylesheet" href="assets/css/pages/apps.css" />
 </head>
 
 <body>
@@ -36,33 +32,12 @@
       </div>
       <i data-lucide="settings"></i>
     </nav>
-    <div class="news">
-      <i data-lucide=""></i>
-      <p></p>
-    </div>
-    <h1 class="title">Ambient</h1>
-    <div class="searchbarContainer">
-      <i data-lucide="search"></i>
-      <form id="uv-form">
-        <input class="searchbar" id="searchbar" type="text" required />
-      </form>
-    </div>
-    <div class="shortcutsContain" id="shortcutsContain"></div>
-    <div id="greeting"></div>
-    <div class="pingCounter">
-      <div id="pingDot" class="dot"></div>
-      <span id="pingValue"></span>
-    </div>
-    <footer>
-      <a href="https://github.com/xnoctra/Ambient" target="_blank">GitHub</a>
-      <span>\</span>
-      <a href="https://discord.gg/5hETqnGc3e">Discord</a>
-    </footer>
+
+    <div id="appsContain"></div>
   </div>
   <script src="assets/js/index.js"></script>
-  <script src="assets/js/shortcuts.js"></script>
-  <script src="assets/js/elements/greeting.js"></script>
-  <script src="assets/js/elements/ping.js"></script>
+  <script src="assets/js/apps.js"></script>
+  <script src="assets/js/formatDesc.js"></script>
   <!-- UV Files -->
   <script src="/search/bundle.js"></script>
   <script src="/search/config.js"></script>

@@ -21,8 +21,12 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(process.cwd(), "/public/index.html"));
 });
 
-app.get("/go", (req, res) => {
-  res.sendFile(path.join(process.cwd(), "/public/go.html"));
+app.get("/search", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "/public/search.html"));
+});
+
+app.get("/a", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "/public/apps.html"));
 });
 
 app.get("/404", (req, res) => {
@@ -67,7 +71,7 @@ server.on("listening", () => {
     console.log(
       `  ${chalk.bold(host("On Your Network:"))}  http://${address.ip()}${address.port === 8080 ? "" : ":" + chalk.bold(address.port)}`,
     );
-  } catch (err) {}
+  } catch (err) { }
 
   if (process.env.REPL_SLUG && process.env.REPL_OWNER) {
     console.log(
