@@ -21,12 +21,12 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(process.cwd(), "/public/index.html"));
 });
 
-app.get("/go", (req, res) => {
-  res.sendFile(path.join(process.cwd(), "/public/go.html"));
+app.get("/search", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "/public/search.html"));
 });
 
-app.get("/changelog", (req, res) => {
-  res.sendFile(path.join(process.cwd(), "/public/changelog.html"));
+app.get("/a", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "/public/apps.html"));
 });
 
 app.get("/404", (req, res) => {
@@ -34,7 +34,7 @@ app.get("/404", (req, res) => {
 });
 
 app.use((req, res, next) => {
-  res.status(404).redirect('/404');
+  res.status(404).redirect("/404");
 });
 
 server.on("request", (req, res) => {
@@ -59,25 +59,39 @@ server.on("listening", () => {
   var host = chalk.hex("b578ff");
   console.log(`Listening to ${chalk.bold(theme("Ambient"))} on:`);
 
-  console.log(`  ${chalk.bold(host("Local System:"))}            http://${address.family === "IPv6" ? `[${address.address}]` : address.address}${address.port === 80 ? "" : ":" + chalk.bold(address.port)}`);
+  console.log(
+    `  ${chalk.bold(host("Local System:"))}            http://${address.family === "IPv6" ? `[${address.address}]` : address.address}${address.port === 80 ? "" : ":" + chalk.bold(address.port)}`,
+  );
 
-  console.log(`  ${chalk.bold(host("Local System:"))}            http://localhost${address.port === 8080 ? "" : ":" + chalk.bold(address.port)}`);
+  console.log(
+    `  ${chalk.bold(host("Local System:"))}            http://localhost${address.port === 8080 ? "" : ":" + chalk.bold(address.port)}`,
+  );
 
   try {
-    console.log(`  ${chalk.bold(host("On Your Network:"))}  http://${address.ip()}${address.port === 8080 ? "" : ":" + chalk.bold(address.port)}`);
-  } catch (err) {
-  }
+    console.log(
+      `  ${chalk.bold(host("On Your Network:"))}  http://${address.ip()}${address.port === 8080 ? "" : ":" + chalk.bold(address.port)}`,
+    );
+  } catch (err) { }
 
   if (process.env.REPL_SLUG && process.env.REPL_OWNER) {
-    console.log(`  ${chalk.bold(host("Replit:"))}           https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`);
+    console.log(
+      `  ${chalk.bold(host("Replit:"))}           https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`,
+    );
   }
 
   if (process.env.HOSTNAME && process.env.GITPOD_WORKSPACE_CLUSTER_HOST) {
-    console.log(`  ${chalk.bold(host("Gitpod:"))}           https://${PORT}-${process.env.HOSTNAME}.${process.env.GITPOD_WORKSPACE_CLUSTER_HOST}`);
+    console.log(
+      `  ${chalk.bold(host("Gitpod:"))}           https://${PORT}-${process.env.HOSTNAME}.${process.env.GITPOD_WORKSPACE_CLUSTER_HOST}`,
+    );
   }
 
-  if (process.env.CODESPACE_NAME && process.env.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN) {
-    console.log(`  ${chalk.bold(host("Github Codespaces:"))}           https://${process.env.CODESPACE_NAME}-${address.port === 80 ? "" : "" + address.port}.${process.env.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}`);
+  if (
+    process.env.CODESPACE_NAME &&
+    process.env.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN
+  ) {
+    console.log(
+      `  ${chalk.bold(host("Github Codespaces:"))}           https://${process.env.CODESPACE_NAME}-${address.port === 80 ? "" : "" + address.port}.${process.env.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}`,
+    );
   }
 });
 server.listen({ port: PORT });

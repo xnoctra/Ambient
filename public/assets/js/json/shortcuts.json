@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Google",
+    "img": "https://storage.googleapis.com/gd-prod/images/a910d418-7123-4bc4-aa3b-ef7e25e74ae6.799a99c1196c2fd4.webp",
+    "link": "https://google.com"
+  },
+  {
+    "name": "Pinterest",
+    "img": "https://fiu-original.b-cdn.net/fontsinuse.com/use-images/82/82314/82314.png?filename=Pinterest-badge-wordmark.png",
+    "link": "https://pinterest.com/login"
+  },
+  {
+    "name": "Amazon",
+    "img": "https://fabrikbrands.com/wp-content/uploads/Amazon-Logo-1.png",
+    "link": "https://amazon.com"
+  },
+  {
+    "name": "ChatGPT",
+    "img": "https://no.uglisounds.se/assets/imgs/sb/ChatGPT.webp",
+    "link": "https://chatgpt.com"
+  },
+  {
+    "name": "YouTube",
+    "img": "https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/05/youtube-logo.png?auto=format&q=60&fit=max&w=930",
+    "link": "https://youtube.com"
+  },
+  {
+    "name": "Discord",
+    "img": "https://no.uglisounds.se/assets/imgs/sb/Discord.webp",
+    "link": "https://discord.com/login"
+  },
+  {
+    "name": "Twitch",
+    "img": "https://no.uglisounds.se/assets/imgs/sb/Twitch.webp",
+    "link": "https://reddit.com"
+  },
+  {
+    "name": "GitHub",
+    "img": "https://no.uglisounds.se/assets/imgs/sb/GitHub.webp",
+    "link": "https://github.com"
+  }
+]

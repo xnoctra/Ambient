@@ -1,0 +1,49 @@
+.searchbarContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 480px;
+  height: 20px;
+  background-color: var(--bg);
+  border-radius: var(--border-radius);
+  padding: 25px 15px;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid var(--border);
+  font-size: 18px;
+  text-align: left;
+  color: var(--text);
+  transition: 0.2s ease;
+}
+
+.searchbarContainer:focus-within {
+  border: 1px solid var(--border-h);
+  box-shadow: 0 0 1px 2px var(--border);
+  width: 550px;
+}
+
+.searchbarContainer svg {
+  stroke: #555;
+}
+
+#uv-form {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.searchbar {
+  position: absolute;
+  font-size: 18px;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: inherit;
+  height: 100%;
+  width: 100%;
+  padding: 25px 15px 25px 50px;
+  left: 0;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
