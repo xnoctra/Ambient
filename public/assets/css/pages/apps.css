@@ -1,112 +1,112 @@
 .container {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    overflow: auto;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
 }
 
 #appsContain {
-    position: absolute;
-    top: 130px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px 20px;
-    padding: 0 27px 30px 27px;
+  position: absolute;
+  top: 130px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px 20px;
+  padding: 0 27px 30px 27px;
 }
 
 .app {
-    position: relative;
-    display: grid;
-    grid-template-columns: auto auto;
-    align-items: flex-start;
-    gap: 13px;
-    background: var(--bg);
-    outline: 1px solid var(--border);
-    padding: 15px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    width: 19.55em;
-    height: 12.5em;
-    overflow: hidden;
-    transition: 0.2s ease;
-    user-select: none;
-    color: var(--text);
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: flex-start;
+  gap: 13px;
+  background: var(--bg);
+  outline: 1px solid var(--border);
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 19.55em;
+  height: 12.5em;
+  overflow: hidden;
+  transition: 0.2s ease;
+  user-select: none;
+  color: var(--text);
 }
 
 .app:hover {
-    outline: 1px solid var(--border-h);
+  outline: 1px solid var(--border-h);
 }
 
 .app img {
-    height: 90px;
-    width: 90px;
-    border-radius: 13px;
+  height: 90px;
+  width: 90px;
+  border-radius: 13px;
 }
 
 .app .desc {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 174px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 174px;
 }
 
 .desc h2 {
-    font-size: 23px;
-    font-weight: normal;
-    margin: 8px 0 0 0;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    text-overflow: ellipsis;
+  font-size: 23px;
+  font-weight: normal;
+  margin: 8px 0 0 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
 }
 
 .desc p {
-    font-size: 14px;
-    margin: 0;
-    line-height: 20px;
-    opacity: 0.5;
-    max-width: 200px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    text-overflow: ellipsis;
+  font-size: 14px;
+  margin: 0;
+  line-height: 20px;
+  opacity: 0.5;
+  max-width: 200px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
 }
 
 .desc a {
-    position: absolute;
-    right: 0;
-    text-decoration: none;
-    transition: 0.2s ease;
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+  transition: 0.2s ease;
 }
 
 .desc p a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .app button {
-    color: var(--text);
-    position: relative;
-    align-self: flex-end;
-    width: 100%;
-    height: 35px;
-    font-size: 16px;
-    border-radius: 10px;
-    cursor: pointer;
-    grid-column: 1 / 3;
-    background: none;
-    border: none;
-    outline: 1px solid var(--border);
-    background: var(--bg);
-    transition: 0.2s ease;
+  color: var(--text);
+  position: relative;
+  align-self: flex-end;
+  width: 100%;
+  height: 35px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  grid-column: 1 / 3;
+  background: none;
+  border: none;
+  outline: 1px solid var(--border);
+  background: var(--bg);
+  transition: 0.2s ease;
 }
 
 .app button:hover {
-    background: var(--border);
+  background: var(--border);
 }

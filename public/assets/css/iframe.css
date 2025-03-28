@@ -1,4 +1,5 @@
-#website, .website {
+#website,
+.website {
   position: fixed;
   display: block;
   background: #000;
