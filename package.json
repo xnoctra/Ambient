@@ -1,6 +1,6 @@
 {
   "name": "Ambient",
-  "version": "1.0.0",
+  "version": "1.3.8",
   "type": "module",
   "engines": {
     "npm": ">=7.0.0",

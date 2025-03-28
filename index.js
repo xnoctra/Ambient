@@ -29,6 +29,10 @@ app.get("/a", (req, res) => {
   res.sendFile(path.join(process.cwd(), "/public/apps.html"));
 });
 
+app.get("/g", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "/public/games.html"));
+});
+
 app.get("/404", (req, res) => {
   res.sendFile(path.join(process.cwd(), "/public/err/404.html"));
 });

@@ -19,8 +19,8 @@
 }
 
 .shortcut img {
-  height: 90px;
-  width: 170px;
+  height: 80px;
+  width: 160px;
   object-fit: cover;
   transition: 0.2s ease;
 }

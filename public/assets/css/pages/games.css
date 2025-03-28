@@ -7,7 +7,7 @@
     overflow: auto;
 }
 
-#appsContain {
+#gamesContain {
     position: absolute;
     top: 130px;
     margin: auto;
@@ -18,7 +18,7 @@
     padding: 0 27px 30px 27px;
 }
 
-.app {
+.game {
     position: relative;
     display: grid;
     grid-template-columns: auto auto;
@@ -37,17 +37,17 @@
     color: var(--text);
 }
 
-.app:hover {
+.game:hover {
     outline: 1px solid var(--border-h);
 }
 
-.app img {
+.game img {
     height: 90px;
     width: 90px;
     border-radius: 13px;
 }
 
-.app .desc {
+.game .desc {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -90,7 +90,7 @@
     text-decoration: underline;
 }
 
-.app button {
+.game button {
     color: var(--text);
     position: relative;
     align-self: flex-end;
@@ -107,6 +107,6 @@
     transition: 0.2s ease;
 }
 
-.app button:hover {
+.game button:hover {
     background: var(--border);
 }
