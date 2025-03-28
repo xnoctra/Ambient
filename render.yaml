@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: ambient
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 8080
+    autoDeploy: true
+    healthCheckPath: /
+    disk:
+      name: ambient-data
+      mountPath: /data
+      sizeGB: 1
