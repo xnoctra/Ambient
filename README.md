@@ -5,7 +5,7 @@
 ![preview](https://i.ibb.co/xtNW3r2s/Screenshot-2025-03-28-10-37-09-AM.png)
 
 > [!IMPORTANT]
-> If you fork this repo please consider giving us > a star. Thank you!
+> If you fork this repo please consider giving us a star. Thank you!
 
 ## Features
 - Proxy
@@ -15,8 +15,8 @@
 
 ## Deployment
 > [!WARNING]
-> You __**can not**__ host Ambient locally via static 
- web hosting. These apply to (but not limited to): Netlify, GitHub Pages, Cloudflare Pages
+> You __**can not**__ host Ambient locally via static web hosting.
+> These apply to (but not limited to): Netlify, GitHub Pages, and Cloudflare Pages
 
 To host Ambient on your server run the following commands:
 
