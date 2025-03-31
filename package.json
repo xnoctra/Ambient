@@ -14,9 +14,12 @@
   "dependencies": {
     "@tomphttp/bare-server-node": "2.0.3",
     "chalk": "^5.2.0",
+    "compression": "^1.7.4",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "express-rate-limit": "^7.1.5",
+    "express-static-gzip": "^2.1.7",
+    "helmet": "^7.1.0",
     "lucide": "^0.484.0"
   },
   "devDependencies": {
