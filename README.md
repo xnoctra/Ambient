@@ -1,10 +1,6 @@
 ![title](https://i.ibb.co/dspWJqwc/image-29.png)
 
-<center>
-
-#### The better way to browse
-
-</center>
+<h3 align="center">The better way to browse</h3>
 
 ![preview](https://i.ibb.co/xtNW3r2s/Screenshot-2025-03-28-10-37-09-AM.png)
 
