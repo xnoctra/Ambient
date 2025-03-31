@@ -5,6 +5,7 @@ import cors from "cors";
 import path from "node:path";
 import { hostname } from "node:os";
 import chalk from "chalk";
+import rateLimit from 'express-rate-limit';
 
 const server = http.createServer();
 const app = express(server);
@@ -12,6 +13,16 @@ const __dirname = process.cwd();
 const bareServer = createBareServer("/bare/");
 const PORT = process.env.PORT || 8080;
 
+// RL
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15m
+  max: 100, // 100rpm
+  message: 'Too many requests from this IP, please try again after 15 minutes',
+  standardHeaders: true,
+  legacyHeaders: false, 
+});
+
+app.use(limiter);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
@@ -98,9 +109,12 @@ server.on("listening", () => {
     );
   }
 });
+
 server.listen({ port: PORT });
+
 process.on("SIGINT", shutdown);
 process.on("SIGTERM", shutdown);
+
 function shutdown() {
   console.log("SIGTERM signal received: closing HTTP server");
   server.close();
