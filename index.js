@@ -3,55 +3,92 @@ import http from "node:http";
 import { createBareServer } from "@tomphttp/bare-server-node";
 import cors from "cors";
 import path from "node:path";
-import { hostname } from "node:os";
 import chalk from "chalk";
-import rateLimit from 'express-rate-limit';
+import compression from 'compression';
 
 const server = http.createServer();
 const app = express(server);
-const __dirname = process.cwd();
 const bareServer = createBareServer("/bare/");
 const PORT = process.env.PORT || 8080;
 
-// rate limiting
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15m
-  max: 100, // 100rpm
-  message: 'Too many requests from this IP, please try again after 15 minutes',
-  standardHeaders: true,
-  legacyHeaders: false, 
-});
+// Enable compression
+app.use(compression({
+  level: 6, // 1-9 (9 slowest)
+  threshold: 1024 // only responses above 1kb
+}));
 
-app.use(limiter);
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static(__dirname + "/public"));
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(cors());
 
+// caching
+const cacheControl = (req, res, next) => {
+  if (req.url.match(/\.(css|js|jpg|jpeg|png|gif|ico|woff2)$/)) {
+    res.setHeader('Cache-Control', 'public, max-age=604800');
+  } else {
+    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+  }
+  next();
+};
+
+app.use(cacheControl);
+
 app.get("/", (req, res) => {
-  res.sendFile(path.join(process.cwd(), "/public/index.html"));
+  try {
+    res.sendFile(path.join(process.cwd(), "/public/index.html"));
+  } catch (err) {
+    console.error('Error serving index:', err);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 app.get("/search", (req, res) => {
-  res.sendFile(path.join(process.cwd(), "/public/search.html"));
+  try {
+    res.sendFile(path.join(process.cwd(), "/public/search.html"));
+  } catch (err) {
+    console.error('Error serving search:', err);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 app.get("/a", (req, res) => {
-  res.sendFile(path.join(process.cwd(), "/public/apps.html"));
+  try {
+    res.sendFile(path.join(process.cwd(), "/public/apps.html"));
+  } catch (err) {
+    console.error('Error serving apps:', err);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 app.get("/g", (req, res) => {
-  res.sendFile(path.join(process.cwd(), "/public/games.html"));
+  try {
+    res.sendFile(path.join(process.cwd(), "/public/games.html"));
+  } catch (err) {
+    console.error('Error serving games:', err);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 app.get("/404", (req, res) => {
-  res.sendFile(path.join(process.cwd(), "/public/err/404.html"));
+  try {
+    res.sendFile(path.join(process.cwd(), "/public/err/404.html"));
+  } catch (err) {
+    console.error('Error serving 404:', err);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
-app.use((req, res, next) => {
+// error config (global)
+app.use((err, req, res, next) => {
+  console.error('Unhandled error:', err);
+  res.status(500).send('Internal Server Error');
+});
+
+app.use((req, res) => {
   res.status(404).redirect("/404");
 });
 
+// optimization for requests
 server.on("request", (req, res) => {
   if (bareServer.shouldRoute(req)) {
     bareServer.routeRequest(req, res);
@@ -110,7 +147,11 @@ server.on("listening", () => {
   }
 });
 
-server.listen({ port: PORT });
+// optimization
+server.listen({ 
+  port: PORT,
+  host: '0.0.0.0'
+});
 
 process.on("SIGINT", shutdown);
 process.on("SIGTERM", shutdown);
