@@ -7,32 +7,24 @@ assignees: xnoctra
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**Description**
+Please provide a clear and concise description of the bug you are experiencing, including any error messages.
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+**Steps to Reproduce**
+1. **Step 1**: Describe the first step to reproduce the bug.
+2. **Step 2**: Describe the second step to reproduce the bug.
+3. **Step 3**: Describe the third step to reproduce the bug.
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+**Expected Behavior**
+Describe what you expected to happen.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+**Actual Behavior**
+Describe what actually happened.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+**Environment**
+- **Operating System**: [Insert OS]
+- **Browser/Platform**: [Insert browser or platform if applicable]
+- **Version**: [Insert version of software or library if applicable]
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+**Additional Information**
+Include any additional details that might help resolve the issue, such as logs or screenshots.
