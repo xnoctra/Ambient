@@ -130,3 +130,6 @@ dist
 .pnp.*
 
 package-lock.json
+
+# Developer tools
+.commit_types
