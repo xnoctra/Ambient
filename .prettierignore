@@ -1,4 +1,5 @@
 *.md
+.dev/*
 public/search/
 public/assets/css/.archived/
 public/assets/js/json/min.apps.json
