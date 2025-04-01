@@ -1,16 +1,17 @@
 # Contributors of Ambient
-Below are the contributors of Ambient and their respective contributions they have helped and assisted with for Ambient.
+Below are the contributors of Ambient and their respective contributions.
 
-## Noctra
-- Coded Frontend
-- Coded Functions
+## Noctra (@xnoctra)
+- Owner & Maintainer
+- Coded frontend
+- Coded functions (`v1^`)
 - Designed UI
 - Designed UX
 
-## Amplify
+## Amplify (from 2024)
 - Coded backend
 - Configured Ultraviolet
-- Frontend functions
+- Frontend functions (obsolete)
 
 # Additional Information & Resources Used
 - Titanium's Ultraviolet version 2
