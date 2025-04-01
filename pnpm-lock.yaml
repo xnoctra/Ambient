@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@tomphttp/bare-server-node':
-        specifier: 2.0.3
-        version: 2.0.3
+        specifier: 2.0.5
+        version: 2.0.5
       chalk:
         specifier: ^5.2.0
         version: 5.4.1
@@ -30,8 +30,8 @@ importers:
 
 packages:
 
-  '@tomphttp/bare-server-node@2.0.3':
-    resolution: {integrity: sha512-IGzZspDwzto+oPsvlV99OALJKH3X1nRWnpBE8EY6nrqu5I83xw3uSUacEdHNnW4rXG0IQ8vZwMH87VOMoArJ3A==}
+  '@tomphttp/bare-server-node@2.0.5':
+    resolution: {integrity: sha512-j3355H1hsrsFCkFVePm7ccuUkjQq+Hgj/wnLmCQa2FzBh9B6+zRkd66kFHaYZ4PAOjSX5wHTKQuXVJrnb7GBxg==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -363,7 +363,7 @@ packages:
 
 snapshots:
 
-  '@tomphttp/bare-server-node@2.0.3':
+  '@tomphttp/bare-server-node@2.0.5':
     dependencies:
       async-exit-hook: 2.0.1
       commander: 10.0.1
