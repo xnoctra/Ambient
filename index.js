@@ -5,6 +5,7 @@ import cors from "cors";
 import path from "node:path";
 import { hostname } from "node:os";
 import chalk from "chalk";
+import compression from "compression";
 
 const server = http.createServer();
 const app = express(server);
@@ -12,10 +13,18 @@ const __dirname = process.cwd();
 const bareServer = createBareServer("/bare/");
 const PORT = process.env.PORT || 8080;
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static(__dirname + "/public"));
+app.use(compression());
+
+app.use(express.json({ limit: '1mb' }));
+app.use(express.urlencoded({ extended: true, limit: '1mb' }));
 app.use(cors());
+
+const staticOptions = {
+  maxAge: '1d',
+  etag: true,
+  lastModified: true
+};
+app.use(express.static(__dirname + "/public", staticOptions));
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(process.cwd(), "/public/index.html"));
@@ -57,10 +66,20 @@ server.on("upgrade", (req, socket, head) => {
   }
 });
 
+process.on("SIGINT", shutdown);
+process.on("SIGTERM", shutdown);
+
+function shutdown() {
+  console.log("SIGTERM signal received: closing HTTP server");
+  server.close();
+  bareServer.close();
+  process.exit(0);
+}
+
 server.on("listening", () => {
   const address = server.address();
-  var theme = chalk.hex("#b578ff");
-  var host = chalk.hex("b578ff");
+  const theme = chalk.hex("#b578ff");
+  const host = chalk.hex("b578ff");
   console.log(`Listening to ${chalk.bold(theme("Ambient"))} on:`);
 
   console.log(
@@ -98,12 +117,5 @@ server.on("listening", () => {
     );
   }
 });
+
 server.listen({ port: PORT });
-process.on("SIGINT", shutdown);
-process.on("SIGTERM", shutdown);
-function shutdown() {
-  console.log("SIGTERM signal received: closing HTTP server");
-  server.close();
-  bareServer.close();
-  process.exit(0);
-}
