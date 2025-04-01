@@ -5,7 +5,6 @@ import cors from "cors";
 import path from "node:path";
 import { hostname } from "node:os";
 import chalk from "chalk";
-import compression from "compression";
 
 const server = http.createServer();
 const app = express(server);
@@ -13,18 +12,18 @@ const __dirname = process.cwd();
 const bareServer = createBareServer("/bare/");
 const PORT = process.env.PORT || 8080;
 
-app.use(compression());
-
-app.use(express.json({ limit: '1mb' }));
-app.use(express.urlencoded({ extended: true, limit: '1mb' }));
-app.use(cors());
-
-const staticOptions = {
-  maxAge: '1d',
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ extended: true, limit: '50mb' }));
+app.use(express.static(__dirname + "/public", {
+  maxAge: '1h',
   etag: true,
   lastModified: true
-};
-app.use(express.static(__dirname + "/public", staticOptions));
+}));
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(process.cwd(), "/public/index.html"));
@@ -66,20 +65,11 @@ server.on("upgrade", (req, socket, head) => {
   }
 });
 
-process.on("SIGINT", shutdown);
-process.on("SIGTERM", shutdown);
-
-function shutdown() {
-  console.log("SIGTERM signal received: closing HTTP server");
-  server.close();
-  bareServer.close();
-  process.exit(0);
-}
-
 server.on("listening", () => {
   const address = server.address();
   const theme = chalk.hex("#b578ff");
   const host = chalk.hex("b578ff");
+
   console.log(`Listening to ${chalk.bold(theme("Ambient"))} on:`);
 
   console.log(
@@ -108,14 +98,25 @@ server.on("listening", () => {
     );
   }
 
-  if (
-    process.env.CODESPACE_NAME &&
-    process.env.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN
-  ) {
+  if (process.env.CODESPACE_NAME && process.env.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN) {
     console.log(
       `  ${chalk.bold(host("Github Codespaces:"))}           https://${process.env.CODESPACE_NAME}-${address.port === 80 ? "" : "" + address.port}.${process.env.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}`,
     );
   }
 });
 
-server.listen({ port: PORT });
+server.listen({
+  port: PORT,
+  backlog: 100
+});
+
+process.on("SIGINT", shutdown);
+process.on("SIGTERM", shutdown);
+
+function shutdown() {
+  console.log("SIGTERM signal received: closing HTTP server");
+  server.close(() => {
+    bareServer.close();
+    process.exit(0);
+  });
+}
