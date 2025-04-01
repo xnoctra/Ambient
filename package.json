@@ -7,7 +7,7 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "start": "node --optimize_for_size --max_old_space_size=460 index.js"
+    "start": "node --optimize_for_size --max_old_space_size=460 --gc_interval=100 index.js"
   },
   "author": "Noctra",
   "license": "GPL-3.0-or-later",
