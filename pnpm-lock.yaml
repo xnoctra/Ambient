@@ -21,8 +21,8 @@ importers:
         specifier: ^4.18.2
         version: 4.21.2
       lucide:
-        specifier: ^0.484.0
-        version: 0.484.0
+        specifier: ^0.486.0
+        version: 0.486.0
     devDependencies:
       prettier:
         specifier: 3.5.3
@@ -204,8 +204,8 @@ packages:
     resolution: {integrity: sha512-Ag3wB2o37wslZS19hZqorUnrnzSkpOVy+IiiDEiTqNubEYpYuHWIf6K4psgN2ZWKExS4xhVCrRVfb/wfW8fWJA==}
     engines: {node: '>= 10'}
 
-  lucide@0.484.0:
-    resolution: {integrity: sha512-GpDcrcHyPVqxp8xWL4UHDLtUUHvrqxLtR4YVq8lK/vVxaGAtp+MmL0WXPFyRlX4Cn+uOHnHYPOt3pjROdE+XPw==}
+  lucide@0.486.0:
+    resolution: {integrity: sha512-3dvlZn/unTvbu7O0Ec9l+NF33qC0JnIuUmKQaY1kr5x2ItIwdEXrTA5QtoxD/126x9l8GHzSM9/g5a/skG9mUQ==}
 
   math-intrinsics@1.1.0:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
@@ -567,7 +567,7 @@ snapshots:
 
   ipaddr.js@2.2.0: {}
 
-  lucide@0.484.0: {}
+  lucide@0.486.0: {}
 
   math-intrinsics@1.1.0: {}
 
