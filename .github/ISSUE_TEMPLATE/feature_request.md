@@ -7,14 +7,20 @@ assignees: xnoctra
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+**Description**
+Please provide a clear and concise description of the feature you would like to see implemented, including any relevant context or use cases.
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+**Proposed Solution**
+Outline your proposed solution or how you envision the feature working.
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+**Use Cases**
+List any specific use cases or scenarios where this feature would be beneficial.
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+**Benefits**
+Describe the benefits of implementing this feature, such as improved user experience or increased functionality.
+
+**Additional Information**
+Include any additional details that might help evaluate the request, such as links to similar features in other projects or potential design mockups.
+
+**Acceptance Criteria**
+List any criteria that would indicate successful implementation of the feature, such as specific functionalities or behaviors.
