@@ -1,0 +1,15 @@
+[VERSION]
+1.3.12
+
+[RELEASE DATE]
+2025-04-01
+
+[CHANGES]
+- Added .dev folder
+- Added VERSION
+- Added .commit-types
+- Updated .gitignore
+- Improved directory organization
+
+[NOTES]
+Stable release for production use.

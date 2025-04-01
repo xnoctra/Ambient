@@ -1,0 +1,11 @@
+feat: Adding a new feature.
+fix: Fixing a bug.
+docs: Documentation changes.
+style: Code style changes (e.g., formatting, whitespace).
+refactor: Code restructuring without changing functionality.
+perf: Performance improvements.
+test: Adding or modifying tests.
+chore: Maintenance tasks (e.g., dependency updates).
+build: Changes to the build system.
+ci: Changes to CI/CD configuration.
+revert: Reverting a previous commit.
