@@ -23,7 +23,7 @@
 ## Server Deployment
 To host Ambient on your server, you must run the following commands:
 
-```
+```bash
 git clone https://github.com/xnoctra/Ambient
 cd Ambient
 ```
@@ -36,14 +36,15 @@ npm run start
 ```
 
 ### pnpm
-```
+If you're using pnpm, run the following commands:
+```bash
 pnpm i
 pnpm start
 ```
 
 ## Updating
 
-```
+```bash
 cd Ambient
 git pull --force --allow-unrelated-histories # This may overwrite your local changes 
 ```
