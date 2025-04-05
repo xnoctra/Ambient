@@ -1,9 +1,32 @@
 /* Sets page layout to: side-by-side */
-.container {
+.settingsContainer {
+    display: flex;
     flex-direction: row;
+    height: 100%;
+    width: 100%;
+    padding: 150px 120px 20px 120px;
+    box-sizing: border-box;
 }
 
 .sidebar {
+    display: flex;
+    flex-direction: column;
+    color: var(--text);
+    width: 100%;
+    max-width: 20%;
+    height: 100%;
+    gap: 20px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.content {
+    max-width: 80%;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
