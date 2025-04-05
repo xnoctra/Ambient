@@ -1,0 +1,10 @@
+/* Sets page layout to: side-by-side */
+.container {
+    flex-direction: row;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

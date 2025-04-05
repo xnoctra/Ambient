@@ -41,6 +41,14 @@ app.get("/g", (req, res) => {
   res.sendFile(path.join(process.cwd(), "/public/games.html"));
 });
 
+app.get("/settings", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "/public/settings/general.html"));
+});
+
+app.get("/settings/general", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "/public/settings/general.html"));
+});
+
 app.get("/404", (req, res) => {
   res.sendFile(path.join(process.cwd(), "/public/err/404.html"));
 });
