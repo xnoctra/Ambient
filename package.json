@@ -13,7 +13,7 @@
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "@tomphttp/bare-server-node": "2.0.5",
-    "chalk": "^5.2.0",
+    "chalk": "^5.6.2",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "lucide": "^0.486.0"
