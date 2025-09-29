@@ -12,7 +12,7 @@
   "author": "Noctra",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@tomphttp/bare-server-node": "2.0.5",
+    "@tomphttp/bare-server-node": "2.0.6",
     "chalk": "^5.2.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
